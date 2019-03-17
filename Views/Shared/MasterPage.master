@@ -1,0 +1,58 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Views_Shared_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div id="container">
+            <div id="header">
+                <div id="logo">
+                     Oxygen
+                </div>
+                <div id="menu">
+                    <ul>
+                        <li>
+                            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Views/Shared/About.aspx">关于我们</asp:HyperLink>
+                        </li>
+                        <li class="menuLine"></li>
+                        <li>
+                             <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Views/Product/Browse.aspx">产品</asp:HyperLink>
+                        </li>
+                        <li class="menuLine"></li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Views/FeedBack/Add.aspx">反馈</asp:HyperLink>
+                        </li>
+                        <li class="menuLine"></li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Views/News/Browse.aspx">新闻</asp:HyperLink>
+                        </li>
+                        <li class="menuLine"></li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink5" runat="server" NavigateUrl="~/Views/Shared/Contact.aspx">联系 </asp:HyperLink>
+                        </li>
+                     </ul>
+               </div>
+            </div>
+            <div id="navigator">
+                <asp:SiteMapPath ID="SiteMapPath1" runat="server" SiteMapProvider="XmlSiteMapProvider"></asp:SiteMapPath>
+            </div>
+            <div id="pagebody">
+                 <asp:ContentPlaceHolder ID="ContentPlaceHolderl" runat="server"></asp:ContentPlaceHolder>
+            </div>
+            <div id="footer">
+                Copyright &copy; 1999-2018, Oxygen.NET, All Rights Reserved 
+                <br />
+               访问人数：<%= Application[ "AccessCount" ] %>&nbsp; &nbsp;
+                当前在线：<%= Application["OnlineCount"] %>
+            </div>
+        </div>
+    </form>
+</body>
+</html>

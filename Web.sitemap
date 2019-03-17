@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode title="站点首页" url="~/Views/Index">
+    <siteMapNode title="关于我们" url="~/Views/Shared/About"/>
+    <siteMapNode title="联系我们" url="~/Views/Shared/Contact"/>
+    <siteMapNode title="注册用户" url="~/Views/User/Register"/>
+    <siteMapNode title="产品刘览" url="~/Views/Product/Browse">
+      <siteMapNode title="查看产品" url="~/Views/Product/Details"/>
+    </siteMapNode>
+    <siteMapNode title="新闻浏览" url="~/Views/News/Browse">
+      <siteMapNode title="查看新闻" url="~/Views/News/Details"/>
+    </siteMapNode>
+    <siteMapNode title="新闻管理" url="~/Views/News/Manage">
+      <siteMapNode title="添加产品" url="~/Views/News/Add"/>
+      <siteMapNode title="修改产品" url="~/Views/News/Edit"/>
+    </siteMapNode>
+    <siteMapNode title="用户管理" url="~/Views/User/UserManage"/>
+    <siteMapNode title="产品管理" url="~/Views/Product/Manage">
+      <siteMapNode title="添力产品" url="~/Views/Product/Add"/>
+      <siteMapNode title="修改产品" url="~/Views/Product/Edit"/>
+      <siteMapNode title="分类管理" url="~/Views/Category/Manage">
+        <siteMapNode title="添力添加" url="~/Views/Category/Add"/>
+      </siteMapNode>
+    </siteMapNode>
+    <siteMapNode title="反馈管理" url="~/Views/FeedBack/Manage"/>
+    <siteMapNode title="反馈" url="~/Views/FeedBack/Add"/>
+  </siteMapNode>
+</siteMap>
